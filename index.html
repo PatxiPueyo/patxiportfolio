@@ -3,29 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patxi Pueyo</title>
+    <title>My Video Showcase</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            text-align: center;
         }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #F0FFFF;
+            background-color: rgba(0, 0, 0, 0.7);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            position: relative;
         }
+
         h1 {
             margin-bottom: 20px;
         }
-        .video {
+
+        .image, .video {
             margin-bottom: 30px;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         iframe {
             width: 100%;
             height: 450px;
@@ -34,17 +54,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to my Portfolio</h1>
-
+        <h1>My Video Showcase</h1>
+        
         <div class="image">
             <h2>My Image</h2>
-            <img src="singe gibon.jpg" alt="Description of Image">
+            <img src="https://raw.githubusercontent.com/<your-username>/<your-repository>/main/<image-file-name>" alt="Description of Image">
         </div>
         
         <div class="video">
             <h2>Video 1</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/W-xFmIOV5W0?si=YcOKjcd4mL4cRWOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            <iframe src="https://www.youtube.com/embed/W-xFmIOV5W0?si=-4aJoA9UbayrOrVF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         
         <div class="video">
@@ -54,9 +73,8 @@
         
         <div class="video">
             <h2>Video 3</h2>
-            <iframe src="https://www.youtube.com/embed/3P98SObZzuo?si=NfWWVqVbcaLe3XTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/3P98SObZzuo?si=QMXZpYa0jZXpzgAt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </body>
 </html>
-
