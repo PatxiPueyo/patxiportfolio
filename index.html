@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Video Showcase</title>
+    <title>Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 50;
-            padding: 20;
+
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+
             height: 100vh;
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
+            background-size: 200% 200%;
+            background-attachment: fixed;
             animation: gradientBG 15s ease infinite;
             color: #fff;
             text-align: center;
@@ -26,7 +29,7 @@
         .container {
             max-width: 800px;
             margin: 0px auto;
-            padding: 20px;
+            padding: 0px;
             background-color: rgba(0, 0, 0, 0.7);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1;
@@ -51,38 +54,238 @@
             height: 450px;
         }
     </style>
+    
 </head>
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/PatxiPueyo/image_bank/main/trefle(3).png" type="image/png">
+
+   <!-- ------------------------------------------------------------------------------------------------------------------ -->
 <body>
-    <div class="container">
-        <h1>My Video Showcase</h1>
-        
-        <div class="image">
+   <div class="container"> 
 
-            <h2>My Video</h2>
-            <blockquote class="imgur-embed-pub" lang="en" data-id="a/zI3FF6b">
-                <a href="//imgur.com/a/zI3FF6b">And now for something completely different #552</a>
-            </blockquote>
-            <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        <div class="intro">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Greetings! I'm Patxi, a data analyst with a passion for sports and analytics. Below you'll find my latest projects, including predictions for the 2024 Olympic Games, an in-depth analysis of Airbnb data, and a study of UFC trends. Enjoy watching!</p>
 
-            <h2>My Image</h2>
-            <img src="https://raw.githubusercontent.com/PatxiPueyo/image_bank/blob/main/singe%20gibon.jpg" alt="Description of Image">
+        <p>Feel free to watch the videos directly on YouTube (timestamps are available in each video descriptions).</p>
 
-        </div>
+        </div> <br><br>
+
+       <hr />
+        <!-- ------------------------------------------------------------------------------------------------------------------ -->
+<style>
+    .video-thumbnail {
+        position: relative;
+        max-width: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .video-thumbnail img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover img {
+        transform: scale(1.05);
+    }
+
+    .video-thumbnail .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover .play-button {
+        background-color: rgba(255, 255, 255, 1);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-thumbnail .play-button::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid rgba(0, 0, 0, 0.8);
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+</style>
+
+
+       <!-- Other content -->
+
+       <div class="video">
+           <h2>Olympic Games 2024 Analysis</h2>
+           <div class="video-description">
+               <p>In this project, my two friends and I analyze historical data to predict potential outcomes of the 2024 Olympic Games. <b>In front of 80+ people.</b><br>Tools used: Python, Pandas, and Scikit-learn.</p>
+           </div>
+           <div class="video-thumbnail" onclick="window.open('https://www.youtube.com/watch?v=W-xFmIOV5W0', '_blank')">
+               <img src="https://img.youtube.com/vi/W-xFmIOV5W0/hqdefault.jpg" alt="Olympic Games 2024 Analysis">
+               <div class="play-button"></div>
+           </div>
+       </div>
+       <br><br>
+                <br><br>
+
+       <hr />
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
         
-        <div class="video">
-            <h2>Video 1</h2>
-            <iframe src="https://www.youtube.com/embed/W-xFmIOV5W0?si=-4aJoA9UbayrOrVF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        
-        <div class="video">
-            <h2>Video 2</h2>
-            <iframe src="https://www.youtube.com/embed/eGYhV7SCvxM?si=T_IuYShqdsLDRKeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        
-        <div class="video">
-            <h2>Video 3</h2>
-            <iframe src="https://www.youtube.com/embed/3P98SObZzuo?si=QMXZpYa0jZXpzgAt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+      <style>
+    .video-thumbnail {
+        position: relative;
+        max-width: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .video-thumbnail img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover img {
+        transform: scale(1.05);
+    }
+
+    .video-thumbnail .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover .play-button {
+        background-color: rgba(255, 255, 255, 1);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-thumbnail .play-button::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid rgba(0, 0, 0, 0.8);
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+</style>
+
+<div class="video">
+    <h2>AirBnb Practical Case</h2>
+
+    <div class="video-description">
+        <p>For this project concerning AirBnb, we explored and analyzed the dataset to answer the following questions:
+        <ul>
+            <li>Is the average price between "entire home" and "private room" properties significant?</li>
+            <li>Does a host's response time affect its final review score?</li>
+            <li>Price trend analysis: Are hosts taking advantage of the calendar to set their prices?</li>
+        </ul>
+        </p>
     </div>
+
+    <div class="video-thumbnail" onclick="window.open('https://www.youtube.com/watch?v=eGYhV7SCvxM', '_blank')">
+        <img src="https://img.youtube.com/vi/eGYhV7SCvxM/hqdefault.jpg" alt="AirBnb Practical Case">
+        <div class="play-button"></div>
+    </div>
+</div>
+               <br><br>
+
+       <hr />
+       <!-- ------------------------------------------------------------------------------------------------------------------ -->
+       <style>
+    .video-thumbnail {
+        position: relative;
+        max-width: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .video-thumbnail img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover img {
+        transform: scale(1.05);
+    }
+
+    .video-thumbnail .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .video-thumbnail:hover .play-button {
+        background-color: rgba(255, 255, 255, 1);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-thumbnail .play-button::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid rgba(0, 0, 0, 0.8);
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+</style>
+
+<div class="video">
+    <h2>UFC Exploration</h2>
+
+    <div class="video-description">
+        <p>This project is my personal favorite. In it, I analyze UFC athletes to identify trends and tendencies, providing insights that can help improve betting strategies.</p>
+    </div>
+
+    <div class="video-thumbnail" onclick="window.open('https://www.youtube.com/watch?v=3P98SObZzuo', '_blank')">
+        <img src="https://img.youtube.com/vi/3P98SObZzuo/hqdefault.jpg" alt="UFC Exploration">
+        <div class="play-button"></div>
+    </div>
+</div>
+
+               
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+               <div class="contact">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to reach out to me at <a href="mailto:patxi.pueyo.pro@gmail.com">patxi.pueyo.pro@gmail.com</a></p>
+                    <p>Connect with me on <a href="https://www.linkedin.com/in/patxi-pueyo/">LinkedIn</a></p>
+        </div>
+
+    </div>
+
 </body>
 </html>
